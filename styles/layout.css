@@ -1,0 +1,17 @@
+#app {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+aside {
+    padding: 2rem;
+    width: 25rem;
+}
+
+main {
+    overflow: auto;
+    padding: 5rem 8.125rem;
+    width: 51.25rem;
+}
