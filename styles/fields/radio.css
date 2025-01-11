@@ -1,0 +1,9 @@
+.radio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.125rem, 1fr));
+    gap: .25rem;
+}
+
+.radio-inner {
+    outline: 1px solid ;
+}

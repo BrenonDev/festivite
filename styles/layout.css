@@ -25,13 +25,13 @@ aside {
     }
 
     & h1 {
-        font: var(--text-logo);
+        font: var(--font-logo);
         color: var(--pink);
         margin-block: 1rem .25rem;
     }
 
     & p {
-        font: var(--text-body-md);
+        font: var(--font-body-md);
         color: var(--text-heading);
         font-weight: 300;
     }
@@ -47,5 +47,19 @@ main {
         width: 51.25rem;
         padding: 5rem 8.125rem;
         border-radius: .75rem;
+    }
+
+    & h2 {
+        font: var(--font-heading-md);
+        color: var(--text-heading);
+        margin-bottom: 2.5rem;
+    }
+
+    .flex {
+        gap: 1rem;
+        
+        & div {
+            width: 100%;
+        }
     }
 }
