@@ -3,12 +3,13 @@
     grid-template-columns: 1fr 4fr;
     height: 100vh;
     overflow-y: hidden;
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
 }
 
 aside {
     padding: 1.25rem;
-    border: 1px solid red;
+    padding-right: 0.625rem;
 
     & .aside-container {
         background: url(../assets/Background.png) no-repeat center/cover;
@@ -16,7 +17,6 @@ aside {
         height: 45.5rem;
         padding: 2rem;
         border-radius: .75rem;
-        border: 1px solid red;
     }
 
     & img {
@@ -39,6 +39,13 @@ aside {
 
 main {
     overflow: auto;
-    padding: 5rem 8.125rem;
-    width: 51.25rem;
+    padding: 1.25rem;
+    padding-left: 0.625rem;
+
+    & .main-container {
+        background-color: var(--shape-body);
+        width: 51.25rem;
+        padding: 5rem 8.125rem;
+        border-radius: .75rem;
+    }
 }
