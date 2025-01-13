@@ -2,8 +2,46 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8.125rem, 1fr));
     gap: .25rem;
+    background-color: var(--input-base);
+    outline: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    padding: .25rem;
+    font: var(--font-body-md);
 }
 
 .radio-inner {
-    outline: 1px solid ;
+    /* outline: 1px solid red */
+    background-color: var(--input-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border-radius: .25rem;
+    position: relative;
+
+    & input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & label {
+        /* font: var(--font-body-sm); */
+        padding-block: .6865rem;
+    }
+
+    &:hover, &:focus-within {
+        background-color: var(--shape-button);
+    }
+
+    &:has(:checked) {
+
+        & label {
+            font-weight: 600;
+        }
+
+        & path {
+            fill: var(--brand-light)
+        }
+    }
 }

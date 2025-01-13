@@ -1,14 +1,13 @@
 input, textarea {
     appearance: none;
     width: 100%;
-    padding: 1rem;
+    padding: .8125rem 1rem;
     font: var(--font-body-md);
     color: var(--text-heading);
     background-color: var(--input-base);
-    border: 1px solid var(--input-body);
+    border: 1px solid var(--input-stroke);
     border-radius: .5rem;
     
-
     &::placeholder {
         color: var(--input-placeholder);
     }
@@ -18,9 +17,5 @@ label {
     font: var(--font-body-sm);
     display: block;
     padding-block: 1rem .75rem;
-
-    & > label {
-        margin-top: 1rem;
-    }
 }
 
