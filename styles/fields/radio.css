@@ -1,47 +1,133 @@
-.radio-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8.125rem, 1fr));
-    gap: .25rem;
-    background-color: var(--input-base);
-    outline: 1px solid var(--input-stroke);
-    border-radius: .5rem;
-    padding: .25rem;
-    font: var(--font-body-md);
+.about{
+    & .radio-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+        gap: .25rem;
+        background-color: var(--input-base);
+        border: 1px solid var(--input-stroke);
+        border-radius: .5rem;
+        padding: .25rem;
+        font: var(--font-body-md);
+    }
+    
+    & .radio-inner {
+        /* outline: 1px solid red */
+        background-color: var(--input-base);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        border-radius: .25rem;
+        position: relative;
+    
+        & input {
+            all: unset;
+            position: absolute;
+            inset: 0;
+        }
+    
+        & label {
+            /* font: var(--font-body-sm); */
+            padding-block: .65625rem;
+        }
+    
+        &:hover, &:focus-within {
+            background-color: var(--shape-button);
+        }
+    
+        &:has(:checked) {
+    
+            & label {
+                font-weight: 600;
+            }
+    
+            & path {
+                fill: var(--brand-light)
+            }
+        }
+    }
 }
 
-.radio-inner {
-    /* outline: 1px solid red */
-    background-color: var(--input-base);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    border-radius: .25rem;
-    position: relative;
-
-    & input {
-        all: unset;
-        position: absolute;
-        inset: 0;
+.customization{
+    & .radio-wrapper {
+        display: flex;
+        justify-content: space-between;
+        /* gap: .75rem; */
     }
 
-    & label {
-        /* font: var(--font-body-sm); */
-        padding-block: .6865rem;
-    }
-
-    &:hover, &:focus-within {
+    & .radio-inner{
         background-color: var(--shape-button);
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: relative;
+
+
+        & input {
+            all: unset;
+            position: absolute;
+            inset: 0;
+        }
+
+        &:hover, &:focus-within {
+            background-color: var(--shape-hover);
+        }
+
+        &:has(:checked) {
+            outline: 2px solid var(--brand-light);
+        }
     }
 
-    &:has(:checked) {
+    & .color {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+    }
 
-        & label {
-            font-weight: 600;
-        }
+    .color#red {
+        background-color: var(--danger);
+    }
 
-        & path {
-            fill: var(--brand-light)
-        }
+    .color#orange {
+        background-color: var(--orange);
+    }
+
+    .color#yellow {
+        background-color: var(--yellow);
+    }
+
+    .color#lime {
+        background-color: var(--lime);
+    }
+
+    .color#green {
+        background-color: var(--green);
+    }
+
+    .color#cyan {
+        background-color: var(--cyan);
+    }
+
+    .color#skyblue {
+        background-color: var(--brand-light);
+    }
+
+    .color#navy {
+        background-color: var(--navy);
+    }
+
+    .color#purple {
+        background-color: var(--purple);
+    }
+
+    .color#fuschia {
+        background-color: var(--fuschia);
+    }
+
+    .color#pink {
+        background-color: var(--pink);
     }
 }
