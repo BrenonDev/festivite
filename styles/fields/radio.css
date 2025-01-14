@@ -49,85 +49,125 @@
 }
 
 .customization{
-    & .radio-wrapper {
+    & .radio-wrapper#color {
         display: flex;
         justify-content: space-between;
-        /* gap: .75rem; */
-    }
 
-    & .radio-inner{
-        background-color: var(--shape-button);
-        width: 2.5rem;
-        height: 2.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        position: relative;
-
-
-        & input {
-            all: unset;
-            position: absolute;
-            inset: 0;
+        & .radio-inner{
+            background-color: var(--shape-button);
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: relative;
+    
+            & input {
+                all: unset;
+                position: absolute;
+                inset: 0;
+            }
+    
+            &:hover, &:focus-within {
+                background-color: var(--shape-hover);
+            }
+    
+            &:has(:checked) {
+                outline: 2px solid var(--brand-light);
+            }
         }
-
-        &:hover, &:focus-within {
-            background-color: var(--shape-hover);
+    
+        & .color {
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
         }
-
-        &:has(:checked) {
-            outline: 2px solid var(--brand-light);
+    
+        & .color#red {
+            background-color: var(--danger);
+        }
+    
+        & .color#orange {
+            background-color: var(--orange);
+        }
+    
+        & .color#yellow {
+            background-color: var(--yellow);
+        }
+    
+        & .color#lime {
+            background-color: var(--lime);
+        }
+    
+        & .color#green {
+            background-color: var(--green);
+        }
+    
+        & .color#cyan {
+            background-color: var(--cyan);
+        }
+    
+        & .color#skyblue {
+            background-color: var(--brand-light);
+        }
+    
+        & .color#navy {
+            background-color: var(--navy);
+        }
+    
+        & .color#purple {
+            background-color: var(--purple);
+        }
+    
+        & .color#fuschia {
+            background-color: var(--fuschia);
+        }
+    
+        & .color#pink {
+            background-color: var(--pink);
         }
     }
 
-    & .color {
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%;
-    }
+    & .radio-wrapper#theme {
+        display: grid;
+        grid-template-columns: repeat(4 ,1fr);
+        justify-items: center;
+        gap: .5rem;
 
-    .color#red {
-        background-color: var(--danger);
-    }
+        & .radio-inner {
+            background-color: var(--shape-button);
+            width: 8.375rem;
+            height: 6.4375rem;
+            padding: .25rem;
+            border-radius: .5rem;
+            position: relative;
 
-    .color#orange {
-        background-color: var(--orange);
-    }
+            & input {
+                all: unset;
+                position: absolute;
+                inset: 0;
+            }
 
-    .color#yellow {
-        background-color: var(--yellow);
-    }
+            &:hover, &:focus-within {
+                background-color: var(--shape-hover);
+                
+            }
 
-    .color#lime {
-        background-color: var(--lime);
-    }
+            &:has(:checked) {
+                outline: 2px solid var(--brand-light);
+            }
 
-    .color#green {
-        background-color: var(--green);
-    }
-
-    .color#cyan {
-        background-color: var(--cyan);
-    }
-
-    .color#skyblue {
-        background-color: var(--brand-light);
-    }
-
-    .color#navy {
-        background-color: var(--navy);
-    }
-
-    .color#purple {
-        background-color: var(--purple);
-    }
-
-    .color#fuschia {
-        background-color: var(--fuschia);
-    }
-
-    .color#pink {
-        background-color: var(--pink);
+            & img {
+                width: 7.875rem;
+                height: 4rem;
+                border-radius: .25rem;
+            }
+    
+            & label {
+                padding-block: .25rem .125rem;
+                text-align: center;
+            }
+        }
     }
 }
