@@ -1,0 +1,40 @@
+.customization {
+    & .input-wrapper#file-input {
+
+        & .file-wrapper {
+            display: flex;
+            gap: .75rem;
+            align-items: center;
+
+            & input::file-selector-button {
+                display: none;
+            }
+    
+            & label {
+                background-color: var(--shape-button);
+                width: 7.4375rem;
+                height: 2.5rem;
+                border-radius: .5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                font-weight: 600;
+
+                &:hover, &:focus-within {
+                    background-color: var(--shape-hover);
+                }
+            }
+
+            & img {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            & input {
+                width: 14rem;
+                color: var(--text-body);
+            }    
+        } 
+    }
+}

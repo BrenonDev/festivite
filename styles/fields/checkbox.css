@@ -1,0 +1,46 @@
+.customization {
+    & .input-wrapper#toggle-switch {
+        & .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        
+            & #switch {
+                width: 4rem;
+                height: 2rem;
+                background-color: var(--input-base);
+                border: 1px solid var(--input-stroke);
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                padding-inline: .25rem;
+            }
+
+            & #button {
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: var(--input-stroke);
+                border-radius: 50%;
+            }
+
+            & label:not(:checked)::before {
+                content: "Escuro";
+            }
+
+            &:has(:checked) {
+                & #switch {
+                    background-color: var(--brand-light);
+                }
+
+                & #button {
+                    background-color: var(--text-heading);
+                    margin-left: auto;
+                }
+
+                & label::before {
+                    content: "Claro";
+                }
+            }
+        }
+    }
+}

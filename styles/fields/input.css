@@ -1,9 +1,12 @@
 input, textarea {
+    font: var(--font-body-md);
+    color: var(--text-heading);
+}
+
+input[type="text"], input[type="datetime-local"], textarea {
     appearance: none;
     width: 100%;
     padding: .8125rem 1rem;
-    font: var(--font-body-md);
-    color: var(--text-heading);
     background-color: var(--input-base);
     border: 1px solid var(--input-stroke);
     border-radius: .5rem;
@@ -16,6 +19,18 @@ input, textarea {
 label {
     font: var(--font-body-sm);
     display: block;
+}
+
+.input-wrapper > label {
     padding-block: 1rem .75rem;
 }
 
+.selector {
+    position: relative;
+
+    & input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+}
