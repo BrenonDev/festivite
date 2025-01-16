@@ -9,3 +9,7 @@ legend {
     gap: .75rem;
     margin-bottom: .5rem;
 }
+
+:focus {
+    outline: 2px solid var(--brand-light);
+}
