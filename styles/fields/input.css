@@ -1,4 +1,4 @@
-input, textarea {
+input, textarea, button {
     font: var(--font-body-md);
     color: var(--text-heading);
 }

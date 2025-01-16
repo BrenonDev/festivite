@@ -1,0 +1,19 @@
+.button {
+    & .submit {
+        width: 11.0625rem;
+        height: 3rem;
+        background-color: var(--brand-mid);
+        border: none;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .75rem;
+        font-weight: 600;
+        margin-left: auto;
+
+        &:hover {
+            background-color: var(--brand-dark);
+        }
+    }
+}
