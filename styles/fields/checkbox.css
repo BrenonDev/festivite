@@ -23,7 +23,7 @@
                 border-radius: 50%;
             }
 
-            & label:not(:checked)::before {
+            & #dark-light:not(:checked)::before {
                 content: "Escuro";
             }
 
@@ -43,7 +43,7 @@
                     margin-left: auto;
                 }
 
-                & label::before {
+                & #dark-light::before {
                     content: "Claro";
                 }
 

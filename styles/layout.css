@@ -52,7 +52,6 @@ main {
     & h2 {
         font: var(--font-heading-md);
         color: var(--text-heading);
-        margin-bottom: 2.5rem;
     }
 
     & .flex {

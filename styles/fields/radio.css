@@ -11,7 +11,6 @@
     }
     
     & .radio-inner {
-        /* outline: 1px solid red */
         background-color: var(--input-base);
         display: flex;
         justify-content: center;
@@ -20,7 +19,6 @@
         border-radius: .25rem;
     
         & label {
-            /* font: var(--font-body-sm); */
             padding-block: .65625rem;
         }
     

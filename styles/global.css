@@ -50,7 +50,7 @@
 body {
     background-color: var(--shape-background);
     color: var(--text-body);
-    /* font-family: var(--font-family-body); */
+    font-family: var(--font-family-body);
 }
 
 h2, h3 {

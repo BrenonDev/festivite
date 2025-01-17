@@ -1,6 +1,5 @@
 .customization {
     & .input-wrapper#file-input {
-
         & .file-wrapper {
             display: flex;
             gap: .75rem;
