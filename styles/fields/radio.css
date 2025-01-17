@@ -29,7 +29,8 @@
         }
     
         &:has(:checked) {
-    
+            background-color: var(--shape-button);
+
             & label {
                 font-weight: 600;
             }
@@ -57,6 +58,10 @@
     
             &:hover, &:focus-within {
                 background-color: var(--shape-hover);
+
+                &:focus-within{
+                    outline: 2px solid var(--brand-light);
+                }
             }
     
             &:has(:checked) {

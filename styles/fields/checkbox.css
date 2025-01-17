@@ -27,9 +27,15 @@
                 content: "Escuro";
             }
 
+            &:hover {
+                #button {
+                    background-color: var(--shape-button);
+                }
+            }
+
             &:has(:checked) {
                 & #switch {
-                    background-color: var(--brand-light);
+                    background-color: var(--brand-mid);
                 }
 
                 & #button {
@@ -39,6 +45,12 @@
 
                 & label::before {
                     content: "Claro";
+                }
+
+                &:hover {
+                    #button {
+                        background-color: var(--text-body);
+                    }
                 }
             }
         }
@@ -52,16 +64,16 @@
     padding-block: 3rem;
     border-top: 1px solid var(--input-stroke);
 
-    & .checkbox {
-        width: 1.25rem;
-        height: 1.25rem;
-        background-color: var(--input-base);
-        border: 1px solid var(--input-stroke);
-        border-radius: .25rem;
-    }
-
     & .checkbox-wrapper {
         align-items: center;
+
+        & .checkbox {
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: var(--input-base);
+            border: 1px solid var(--input-stroke);
+            border-radius: .25rem;
+        }
 
         &:has(:checked) {
             & .checkbox {
@@ -69,10 +81,23 @@
                 border: 1px solid var(--brand-light);
             }
         }
-    }
 
-    & a {
-        color: var(--brand-light);
-        font-weight: 600;
+        &:hover, &:focus-within {
+            & .checkbox {
+                border: 1px solid var(--brand-light);
+                background-color: var(--input-stroke);
+            }
+        }
+
+        & input {
+            z-index: 1;
+        }
+
+        & a {
+            color: var(--brand-light);
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
     }
 }

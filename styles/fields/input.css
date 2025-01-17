@@ -1,6 +1,10 @@
 input, textarea, button {
     font: var(--font-body-md);
     color: var(--text-heading);
+
+    &:focus {
+        outline: 2px solid var(--brand-light);
+    }
 }
 
 input[type="text"], input[type="datetime-local"], input[type="email"], textarea {
@@ -51,5 +55,23 @@ label {
         all: unset;
         position: absolute;
         inset: 0;
+    }
+}
+
+input[type="text"] {
+    & ~ .error {
+        margin-top: .5rem;
+        display: flex;
+        gap: .5rem;
+        font: var(--font-body-xs);
+        color: var(--danger);
+    }
+
+    &:invalid:not(:focus) {
+        outline: 2px solid var(--danger);
+    }
+
+    &:valid ~ .error {
+        display: none;
     }
 }
